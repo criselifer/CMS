@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     'home',
+    'permisos',
 
     "crispy_forms",
     "crispy_bootstrap5",

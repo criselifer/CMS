@@ -72,6 +72,27 @@
                   <li><a href="#" class="nav-link px-2 link-body-emphasis">Todos</a></li>
                   <li><a href="#" class="nav-link px-2 link-body-emphasis">Tipo Contenido</a></li>
                   <li><a href="#" class="nav-link px-2 link-body-emphasis">Categorias</a></li>
+
+                <!-- Hay que parametrizar de acuerdo al grupo al que pertenece, no a los permisos -->
+
+                  {% if user.is_authenticated %}
+                    {% if perms.contenido.crear_contenido %}
+                        <li><a href="#" class="nav-link px-2 link-body-emphasis">Crear contenido</a></li>
+                    {% endif %}
+                  {% endif %}
+
+                  {% if user.is_authenticated %}
+                    {% if perms.contenido.editar_contenido %}
+                        <li><a href="#" class="nav-link px-2 link-body-emphasis">Editar contenido</a></li>
+                    {% endif %}
+                  {% endif %}
+
+                  {% if user.is_authenticated %}
+                    {% if perms.contenido.publicar_contenido %}
+                        <li><a href="#" class="nav-link px-2 link-body-emphasis">Revision</a></li>
+                    {% endif %}
+                  {% endif %}
+
                 </ul>
 
                 <div class="dropdown text-end">

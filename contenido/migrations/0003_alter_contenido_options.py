@@ -5,7 +5,7 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("permisos", "0002_rename_nombremodelo_contenido_and_more"),
+        ("contenido", "0002_rename_nombremodelo_contenido_and_more"),
     ]
 
     operations = [

@@ -5,7 +5,7 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("permisos", "0001_initial"),
+        ("contenido", "0001_initial"),
     ]
 
     operations = [

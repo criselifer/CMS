@@ -21,14 +21,14 @@ of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a
 for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
-
   <ul class="socialaccount_providers">
     {% include "socialaccount/snippets/provider_list.html" with process="login" %}
   </ul>
-
   <div class="login-or">{% trans 'or' %}</div>
-
+  <!-- Agregar enlace de inicio de sesión con Google aquí -->
+  <a href="{% provider_login_url 'google' %}">Iniciar sesión con Google</a>
 </div>
+
 
 {% include "socialaccount/snippets/login_extra.html" %}
 
@@ -53,3 +53,4 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 </div>
 
 {% endblock %}
+

@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
+    'allauth.socialaccount.providers.google',
+    
     'home',
     'contenido',
 
@@ -172,3 +173,15 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 
 # Configuracion de django-allout. Al darle a cerrar sesion, este se deslogea automaticamente sin preguntar
 # ACCOUNT_LOGOUT_ON_GET = True
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'APP': {
+            'client_id': '1097883079798-tg818mg4evchiacqm3mtfhcj1t4el9tb.apps.googleusercontent.com',
+            'secret': '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',
+            'key': '',
+            'redirect_uri': 'http://localhost:8000/accounts/google/login/callback/',
+        }
+    }
+}
+
